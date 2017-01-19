@@ -19,7 +19,7 @@ function xrzb(id,datas){
 			},
 			series: [
 				{
-					name:'学校占比',
+					name:'收入类型',
 					type:'pie',
 					radius: ['26%', '60%'],
 					avoidLabelOverlap: false,
@@ -86,7 +86,7 @@ function xrsj(id,datas,iss){
 				}],
 			series : [
 			{
-					name:"",
+					name:"收入",
 					type:'bar',
 					barWidth:"50%",
 					itemStyle:{normal:{color:"#0db310"}},
