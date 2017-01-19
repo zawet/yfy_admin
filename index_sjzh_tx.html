@@ -146,60 +146,17 @@
 
     
 </div>
-
-
+<script src="js/com.js"></script>
 <script>
-
-
-
 $(function(){
 	qkyh5_topa_header(0,1);		
-	yhcadr();
-	
-	$(".sz_li").on("click",function(){
-	var where=$(this).attr("to");
-	 //console.log(where);
-	$("."+where).addClass("open");
-	});
-	$(".pro_zfbut.close,.back_icon").on("click",function(){
-		$(".pages").removeClass("open");
-	});
-	$(".lt_btn .btn").each(function(i) {
-        $(this).click(function(){	
+	yhcadr();	
+	pages();
+	lt_btn(function(thiss,i){
 		$(".zh_type").slideUp(100);
 		$(".zh_type").eq(i).slideDown(500);
-		$(this).addClass("active").siblings().removeClass("active");
-		
-		});
-    });	
+	});
 });
-
-function yhcadr(){
-	$(".yh_cadr").each(function(i) {
-		
-		$(this).click(function(){
-			if(i!=$(".yh_cadr").length-1){
-			$(this).toggleClass("choose").next(".yh_cadr").addClass("mt10").siblings().removeClass("mt10");
-			$(this).siblings().removeClass("choose");
-			}else{
-				$(this).toggleClass("choose").siblings().removeClass("choose");
-				$(this).removeClass("mt10").siblings().removeClass("mt10");
-			}
-			
-		});
-    });
-}
-
-
-//自动变化以头部的距离，i为想离头部有多远，可以负数
-function qkyh5_topa_header(i,jq){
-	if(jq==1){
-	var titHeight = $('.qkyh5_header').height()+i;
-	}else{
-	var titHeight = $('.qkyh5_header').offset().height+i;}
-	//console.log(titHeight);
-	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
-}
 
 </script>
 </body>

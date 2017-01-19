@@ -70,6 +70,7 @@
 
 
 <script src="js/tb_h5.js"></script>
+<script src="js/com.js"></script>
 <script>
 
 var datas_bl_mon={"现金":[2000,"#fde35b"],"微信":[5000,"#0db310"],"支付宝":[3000,"#6fcefe"]};
@@ -108,25 +109,13 @@ $(function(){
 		$(this).addClass("active").siblings().removeClass("active");
 		});
     });
-	
-
-
-
 });
 
 $(window).on('resize',function(){
-	xrsj("view",datas_qs);
+	xrsj("view",datas_qs,true);
 });
 
-//自动变化以头部的距离，i为想离头部有多远，可以负数
-function qkyh5_topa_header(i,jq){
-	if(jq==1){
-	var titHeight = $('.qkyh5_header').height()+i;
-	}else{
-	var titHeight = $('.qkyh5_header').offset().height+i;}
-	//console.log(titHeight);
-	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
-}
+
 
 </script>
 </body>

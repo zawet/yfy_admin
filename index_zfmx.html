@@ -32,7 +32,7 @@
 </div>
 
 <!--中部标准，一般放列表-->
-<div class="qkyh5_main h100 box_b pb32">
+<div class="qkyh5_main pb10">
 	
     <div class="jl_li mt10">
     	<div class="jl_li_up ub ub-ac">
@@ -211,32 +211,25 @@
 </div>
 
 
-
+<script src="js/com.js"></script>
 <script>
 $(function(){
 	qkyh5_topa_header(0,1);	
-		$(".jl_iconbtn").on("click","i",function(){
-			$(this).toggleClass("r180");
-			$(this).parents(".jl_li").find(".jl_li_down").slideToggle(200);
-			//$(this).parents(".jl_li").siblings().find(".jl_li_down").slideUp(200);
-			//$(this).parents(".jl_li").siblings().find(".jl_iconbtn").removeClass("r180");
-		});
+	$(".jl_iconbtn").on("click","i",function(){
+		$(this).toggleClass("r180");
+		$(this).parents(".jl_li").find(".jl_li_down").slideToggle(200);
+	});
 		
-		$(".lt_btn4 .btn").on("click",function(){
-			$(this).addClass("active").siblings().removeClass("active");
-		})
+	$(".lt_btn4 .btn").on("click",function(){
+		$(this).addClass("active").siblings().removeClass("active");
+	});
+	scrollload(function(){
+		//滚动到底后执行函数
+	});
 
 });
 
-//自动变化以头部的距离，i为想离头部有多远，可以负数
-function qkyh5_topa_header(i,jq){
-	if(jq==1){
-	var titHeight = $('.qkyh5_header').height()+i;
-	}else{
-	var titHeight = $('.qkyh5_header').offset().height+i;}
-	//console.log(titHeight);
-	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
-}
+
 
 </script>
 </body>

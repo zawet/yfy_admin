@@ -268,89 +268,14 @@
         </div>
     </div>
 </div>
+<script src="js/com.js"></script>
 <script>
-
-
-
 $(function(){
-	select_box();
+	select_box_fu();
 	pages();
-	
-	//添加更多的商品栏
-    $("#addtbsp").on("click",function(){
-		var thisxh=$(".pages.two .spli").length;
-		$("#tbsp_mb .spxh").html(thisxh+1);
-		$(this).before($("#tbsp_mb").html());
-	});
-	$("#addswsp").on("click",function(){
-		var thisxh=$(".pages.three .spli").length;
-		$("#swsp_mb .spxh").html(thisxh+1);
-		$(this).before($("#swsp_mb").html());
-	});
+	addmore_mb("#addtbsp","#tbsp_mb",".pages.two");
+	addmore_mb("#addswsp","#swsp_mb",".pages.three");
 });
-
-function pages(){
-	$(".sz_li").on("click",function(){
-	var where=$(this).attr("to");
-	$(".pages").removeClass("open");
-	 //console.log(where);
-	$("."+where).addClass("open");
-	});
-	$(".pro_zfbut.close,.back_icon").on("click",function(){
-		$(".pages").removeClass("open");
-	});
-}
-
-//下拉多选项
-function select_box(){
-	$(".select_icon").on("click",function(){
-		$(this).parent().attr("ischoose","yes");
-		$(".select_more").addClass("open");
-		$(".select_mask").slideDown(100);
-	});
-	$(".select_mask").on("click",function(){
-		$(".select_box").attr("ischoose","no");
-		$(".select_more").removeClass("open");
-		$(".select_mask").slideUp(100);
-	});
-	
-	$(".select_mi").on("click",function(){
-		$(this).toggleClass("r45");
-		$(this).parent().next(".select_twobox").first().slideToggle(200);
-	});
-	
-	var addhtml="";
-	
-	chobox(
-		function(thisin){
-			
-			addhtml+=thisin.next(".select_mtxt").html()+",";
-			$(".select_box[ischoose='yes']").find(".select_value").val(addhtml);
-		},
-		function(thisout){
-			var ishtml=$(".select_box[ischoose='yes']").find(".select_value").val();
-			var chtml=thisout.next(".select_mtxt").html()+",";
-			ishtml=ishtml.replace(chtml,"");
-			addhtml=ishtml;
-			$(".select_box[ischoose='yes']").find(".select_value").val(ishtml);
-		}
-	);
-	
-}
-
-function chobox(infun,outfun){
-	$(".chobox").on("click",function(){
-		var isc=$(this).attr("isc");
-		if(isc=="no"){
-			$(this).addClass("open");$(this).attr("isc","yes");
-			infun($(this));
-		}else{
-			$(this).removeClass("open");$(this).attr("isc","no");
-			outfun($(this));
-		}
-	})
-}
-
 </script>
 </body>
 </html>

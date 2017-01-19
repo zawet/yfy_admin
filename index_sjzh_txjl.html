@@ -31,7 +31,7 @@
 </div>
 
 <!--中部标准，一般放列表-->
-<div class="qkyh5_main h100 box_b pb32">
+<div class="qkyh5_main pb32">
 	
     <div class="tx_li ba_ff br_b br_t br_ddd mt10">
         <div class="t_c pt16 pb8 po_r wd_100">
@@ -83,19 +83,17 @@
         <div class="down_li ub ub-ac"><div class="ub-f1">提现时间</div><div class="ub-f1 t_r">2016/11/11 11:11:11</div></div>  
         </div>   
     </div>
-    
-    
-    
-           
-   
 </div>
 
 
-
+<script src="js/com.js"></script>
 <script>
 $(function(){
 	qkyh5_topa_header(0,1);	
-		$(".tx_morebtn").click(function(){
+	scrollload(function(){
+		//滚动到底后执行函数
+	});
+	$(".tx_morebtn").click(function(){
 			if($(this).find("i").attr("iscli")=="no"){
 				$(this).find("i").html("&#xe65a;");
 				$(this).parents(".tx_li").find(".txli_more").slideDown(200);
@@ -104,26 +102,13 @@ $(function(){
 				$(this).find("i").html("&#xe61a;");
 				$(this).parents(".tx_li").find(".txli_more").slideUp(200);
 				$(this).find("i").attr("iscli","no");
-			}
-			
-		});
-		
-		$(".lt_btn3 .btn").on("click",function(){
-			$(this).addClass("active").siblings().removeClass("active");
-		})
+			}	
+	});
+	$(".lt_btn3 .btn").on("click",function(){
+		$(this).addClass("active").siblings().removeClass("active");
+	});
 
 });
-
-//自动变化以头部的距离，i为想离头部有多远，可以负数
-function qkyh5_topa_header(i,jq){
-	if(jq==1){
-	var titHeight = $('.qkyh5_header').height()+i;
-	}else{
-	var titHeight = $('.qkyh5_header').offset().height+i;}
-	//console.log(titHeight);
-	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
-}
-
 </script>
 </body>
 </html>

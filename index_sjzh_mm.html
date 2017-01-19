@@ -21,9 +21,7 @@
     <span class="pa_tb12 co_ff fz_18 iskuai">密码安全</span>
     <a class="back_icon" href="index_sjzh.html"><i class="appicon fz_28">&#xe65b;</i></a>
     </div>
-
-
-    
+  
     <a class="iskuai sz_li" to="two">
     <div class="ub ub-ac pa_16 ba_ff br_b br_t br_ddd mt10">
     <div class="ub_f3 fz_16"><i class="appicon mr6 fz_18">&#xecfa;</i>登录密码</div>
@@ -114,23 +112,11 @@
     <a class="pro_zfbut close mt10 ma_lrauto zf">确定修改</a>
 </div>
 
-
-
-
+<script src="js/com.js"></script>
 <script>
 $(function(){
-	$(".sz_li").on("click",function(){
-	var where=$(this).attr("to");
-	 //console.log(where);
-	$("."+where).addClass("open");
-	});
-	$(".pro_zfbut.close,.back_icon").on("click",function(){
-		$(".pages").removeClass("open");
-	});
-	
+	pages();
 });
-
-
 </script>
 </body>
 </html>

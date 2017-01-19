@@ -41,7 +41,7 @@
     </div>
 </div>
 <!--中部标准，一般放列表-->
-<div class="qkyh5_main h100 box_b socrllbox">
+<div class="qkyh5_main">
 <div class="pa_12">
   <a href="index_sbinfo.html">
 	<div class="sbli ub ub-ac">
@@ -136,56 +136,18 @@
 </div>
 
 <script src="js/tb_h5.js"></script>
+<script src="js/com.js"></script>
 <script>
-
-
 $(function(){
 	qkyh5_topa_header(0,1);	
 	select_box();
-	$(".lt_btn2 .btn").on("click",function(){
-		$(this).addClass("active").siblings().removeClass("active");
+	lt_btn(function(thiss){});
+	lt_btn2(function(thiss){});
+	pages();
+	scrollload(function(){
+		//滚动到底后执行函数
 	});
-	
-	$(".lt_btn .btn").each(function(i) {
-        $(this).click(function(){	
-		$(this).addClass("active").siblings().removeClass("active");
-		});
-    });
-	
-	$(".sz_li").on("click",function(){
-	var where=$(this).attr("to");
-	 //console.log(where);
-	$("."+where).addClass("open");
-	});
-	$(".pro_zfbut.close,.back_icon").on("click",function(){
-		$(".pages").removeClass("open");
-	})
-
-
 });
-
-
-
-//自动变化以头部的距离，i为想离头部有多远，可以负数
-function qkyh5_topa_header(i,jq){
-	if(jq==1){
-	var titHeight = $('.qkyh5_header').height()+i;
-	}else{
-	var titHeight = $('.qkyh5_header').offset().height+i;}
-	//console.log(titHeight);
-	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
-}
-
-
-function select_box(){
-	$(".select_icon").on("click",function(){
-		$(this).next(".select_more").toggleClass("open");
-	});
-	$(".select_more a.select_mli").on("click",function(){
-        $(this).parents(".select_box").find(".select_value").val($(this).html());
-		$(this).parent().removeClass("open");
-    });
-}
 </script>
 </body>
 </html>

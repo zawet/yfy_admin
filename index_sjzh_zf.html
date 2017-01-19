@@ -40,34 +40,12 @@
     </div>
    
 </div>
-
-
-
-
-
-
-
+<script src="js/com.js"></script>
 <script>
-
-
 
 $(function(){	
 wx_kg();
 });
-
-function wx_kg(){
-	$(".wx_kg").on("click",function(){
-		var ot=$(this).attr("o_txt");var ct=$(this).attr("c_txt");
-		if($(this).attr("isc")=="no"){
-			$(this).addClass("open").next(".kg_txt").addClass("open").html(ot);$(this).attr("isc","yes");
-		}else{
-			$(this).removeClass("open").next(".kg_txt").removeClass("open").html(ct);;$(this).attr("isc","no");
-		}
-	});
-}
-
-
-
 </script>
 </body>
 </html>
