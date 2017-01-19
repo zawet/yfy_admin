@@ -89,38 +89,12 @@
     
 </div>
 
-
+<script src="js/com.js"></script>
 <script>
-
-
-
 $(function(){
 	qkyh5_topa_header(0,1);	
-	
-	$(".sz_li").on("click",function(){
-	var where=$(this).attr("to");
-	 //console.log(where);
-	$("."+where).addClass("open");
-	});
-	$(".pro_zfbut.close,.back_icon").on("click",function(){
-		$(".pages").removeClass("open");
-	})	
-
-
+	pages();
 });
-
-
-
-//自动变化以头部的距离，i为想离头部有多远，可以负数
-function qkyh5_topa_header(i,jq){
-	if(jq==1){
-	var titHeight = $('.qkyh5_header').height()+i;
-	}else{
-	var titHeight = $('.qkyh5_header').offset().height+i;}
-	//console.log(titHeight);
-	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
-}
-
 </script>
 </body>
 </html>

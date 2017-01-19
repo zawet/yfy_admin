@@ -85,19 +85,11 @@
     <a class="pro_zfbut ma_b10 ma_lrauto zf close" to="three">确认密码</a>
 </div>
 
-
+<script src="js/com.js"></script>
 
 <script>
 $(function(){
-	$(".sz_li").on("click",function(){
-	var where=$(this).attr("to");
-	 //console.log(where);
-	$("."+where).addClass("open");
-	});
-	$(".pro_zfbut.close,.back_icon").on("click",function(){
-		$(".pages").removeClass("open");
-	});
-	
+	pages();	
 });
 
 </script>

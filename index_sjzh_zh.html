@@ -56,8 +56,6 @@
 
 </div>
 
-
-
 <div class="yc" id="man_mb">
 	<div class="spli">
     	<div class="ub ub-ac pa_16 br_db br_ddd ba_fc">
@@ -79,56 +77,18 @@
     
 </div>
 
-<div class="yc" id="inp_mb">
-<input type="text" class="tx_input br_nb fz_14" placeholder="">
-</div>
+<script src="js/com.js"></script>
 <script>
-
 $(function(){	
-
 	$("#addman").click(function(){
 		var thisxh=$(".man_box .spli").length;
 		$("#man_mb .spxh").html(thisxh+1);
 		$(this).before($("#man_mb").html());
 		ty(".tys");
 	});
-ty(".ty");
-edit();
+	ty(".ty");
+	edit();
 });
-function ty(id){
-	$(id).on("click",function(){
-		if($(this).attr("isc")=="no"){
-		$(this).html("开启").addClass("on");
-		$(this).parents(".spli").addClass("close");
-		$(this).attr("isc","yes");
-		}else{
-		$(this).html("停用").removeClass("on");
-		$(this).parents(".spli").removeClass("close");
-		$(this).attr("isc","no");
-		}
-	});
-}
-
-function edit(){
-	$(".edit_icon").on("click",function(){
-		if($(this).attr("isc")=="no"){
-			$(".edit_box").each(function(i) {
-				$(this).removeClass("t_r");
-                var thtml=$(this).html();
-			    $(this).html('<input type="text" class="tx_input br_nb fz_14 wd_100" value="'+thtml+'">');
-            });
-			$(this).attr("isc","yes");
-		}else{
-			$(".edit_box").each(function(i) {
-				$(this).addClass("t_r");
-               var tvhtml=$(this).find("input").val();
-			   $(this).html(tvhtml);
-            });
-			$(this).attr("isc","no");
-		}
-	});
-}
-
 </script>
 </body>
 </html>
