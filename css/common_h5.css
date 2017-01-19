@@ -484,10 +484,10 @@ textarea,input{ outline:none;}
 .qkyh5_footbg{ position:fixed; bottom:0;left:0; width:100%;  z-index:9997; height:58px; border-top:1px solid #cacaca;}
 .qkyh5_footbg>div a.footli{ display:block; color:#535353; height:58px; box-sizing:border-box; padding:6px 0;}
 .qkyh5_footbg>div a.footli.active{color:#0aa10d;}
-.qkyh5_footbg>div a.footli:hover{ border:1px solid #cacaca;border-bottom:none; border-top:none;
+/*.qkyh5_footbg>div a.footli:hover{ border:1px solid #cacaca;border-bottom:none; border-top:none;
 background: -webkit-linear-gradient(#fff, #f1f1f1);
 background: linear-gradient(#fff, #f1f1f1);
-background: -moz-linear-gradient(#fff, #f1f1f1);color:#666;}
+background: -moz-linear-gradient(#fff, #f1f1f1);color:#666;}*/
 .qkyh5_footbg>div i{ font-size:24px;}
 .qkyh5_footbg>div div{ font-size:14px;}
 .footer {position: fixed;bottom:8px;left:2%;width:96%; border-radius:4px;z-index:9997;}
