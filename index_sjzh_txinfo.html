@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>提现</title>
+<!--框架css-->
+<link href="css/common_h5.css" rel="stylesheet" type="text/css"/><!--公共css-->
+<!--附加css-->
+<link href="css/xsda.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+</head>
+<body class="qkybody h100 po_ab">
+
+<!--中部标准，一般放列表-->
+<div class="qkyh5_main pb0 h100 box_b">
+	
+    <div class="yh_cadr weixin trn mt10">
+        <div class="yh_logo ub ub-ac"><div class="ub-f1 t_r pr10"><i class="appicon fz_40 co_wx">&#xe683;</i></div><div class="co_z6 fz_24 fz_we ub-f1">微信账户</div></div>
+        <div class="weixin_info">
+            <div class="weixin_tx ma_lrauto"><img src="images/tx_1.jpg"></div>
+            <span>wx123456</span>
+        </div>
+        <a class="yh_choose" href="index_sjzh_txinfo.html"><i class="appicon fz_26">&#xe601;</i></a>
+    </div>
+    
+    <div class="tx_box ba_ff br_b br_t  br_ddd pa_lr16 mt10">
+    <div class="pt16 ub ub-ac">
+    <div class="fz_16 ub-f1 co_z3">提现金额</div>
+    <div class="ub-f4 po_r"><input type="text" class="tx_input"><i class="appicon po_ab tx_icon">&#xe613;</i></div>
+    </div>
+    <div class="co_z9 pt16 pb8">提现手续费：99（微信收取）</div>
+    <div class="co_z9 pt8 pb16">可提现总额：18888元</div>
+    </div>
+    
+    <div class=" ba_ff br_b br_t br_ddd pa_lr16 mt10">
+    <div class="wd_100 ma_lrauto pt16 pb8"><input type="text" class="tx_input fz_14"  placeholder="提现密码"></div>
+    <div class="wd_100 ma_lrauto pt8 ub ub-ac">
+    <div class=" wd_70"><input type="text" class="tx_input fz_14"  placeholder="手机安全码"></div>
+    <div class="wd_30 t_r"><a class="btn wd_90 fz_14">获取安全码</a></div>
+    </div>
+    <div class=" co_89 pt6 pb20  wd_100 ma_lrauto box_b pl16">接手手机：1380****0000</div>
+    </div>
+    
+    <a class="pro_zfbut po_r zf"><i class="appicon fz_we zf_icon">&#xe600;</i>提现</a>
+    
+</div>
+
+
+
+<script>
+$(function(){
+	$(".pro_zfbut.zf").click(function(){		
+		$(".zf_icon").addClass("open");
+		setTimeout(function(){
+			window.location.href="index_sjzh_txjl.html"; 
+			
+			},2000);
+	});
+	
+});
+
+
+</script>
+</body>
+</html>

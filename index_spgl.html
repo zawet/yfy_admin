@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>商品管理</title>
+<!--框架css-->
+<link href="css/common_h5.css" rel="stylesheet" type="text/css"/><!--公共css-->
+<!--附加css-->
+<link href="css/xsda.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+
+</head>
+<body class="qkybody h100 po_ab">
+
+
+<!--中部标准，一般放列表-->
+<div class="qkyh5_main h100 box_b ">
+	<div class=" ba_ff pa_tb12 pa_lr16 co_or2 t_c br_b br_ddd">商品模版内所添加的商品，会在用户的支付界面显示</div>
+    <div class="clear3 pa_tb14">
+    
+       <div class="spmb_box">
+           <a class="sz_li" to="two">
+               <div class="spmb_name">利和广场投币机商品</div>
+               <div class="spmb_type">投币类</div>
+           </a>
+       </div>
+       
+       <div class="spmb_box">
+           <a class="sz_li" to="three">
+               <div class="spmb_name">大信自动售卖机商品</div>
+               <div class="spmb_type">实物类</div>
+           </a>
+       </div>
+       
+       <div class="spmb_box add ">
+           <a class="add_spmb pa_tb10 iskuai co_z6 sz_li" to="two">
+               <div class="ub ub-ac pa_tb20">
+                   <div class="ub-f1 t_r mr6"><i class="appicon fz_28">&#xe73c;</i></div>
+                   <div class="ub-f1 fz_18">添加商品模版</div>
+               </div>
+           </a>
+       </div>
+   
+    </div>
+</div>
+
+<div class="qkyh5_footbg ub ub-ac ba_ff">
+    <div class="ub-f1 t_c"><a class="footli" href="index_admin.html"><i class="appicon">&#xe61d;</i><div>经营报表</div></a></div>
+    <div class="ub-f1 t_c"><a class="footli" href="index_sbgl.html"><i class="appicon">&#xe722;</i><div>设备管理</div></a></div>
+    <div class="ub-f1 t_c"><a class="footli active" href="index_spgl.html"><i class="appicon">&#xe661;</i><div>商品管理</div></a></div>
+    <div class="ub-f1 t_c"><a class="footli" href="index_sjzh.html"><i class="appicon">&#xe66a;</i><div>商家账户</div></a></div>
+</div>
+
+<!--引用页-->
+<div class="pages two trn">
+	<div class="ad_img wd_100  t_c pa_b10 pl0 pr0 bg3 po_r">
+        <i class="appicon fz_50 co_ff">&#xe60c;</i>
+        <span class="pa_tb12 co_ff fz_18 iskuai">添加商品</span>
+        <a class="back_icon"><i class="appicon fz_28">&#xe65b;</i></a>
+    </div>
+    <div class="pa_16 ba_ff pb26 br_db br_ddd">
+        <div class="pt10 ub ub-ac">
+        <div class="fz_16 co_z3 wd_28">模板名：</div>
+        <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入模板名"></div>
+        </div>
+        
+        <div class="pt20 ub ub-ac">
+        <div class="fz_16 co_z3 wd_28">商品类型：</div>
+        <div class="ub-f1 lt_btn clear3"><a class="btn active trn fl auto pa_lr10 sz_li" to="two">投币类</a><a class="btn trn fl auto pa_lr10 sz_li" to="three">实物类</a></div>
+        </div>   
+    </div>
+    
+    <div class="spli pa_16 ba_fc br_db br_ddd ub ub-ac">
+    	<div class="fz_16 fz_we spxh mr16">1</div>
+        <div class="ub-f1">
+            <div class=" ub ub-ac">
+                <div class="fz_16 co_z3 wd_28">商品名：</div>
+                <div class="ub-f1"><input type="text" class="tx_input fz_14 br_ddd"  placeholder=""></div>
+                <div class=" wd_12 t_c">元 =</div>
+                <div class="ub-f1"><input type="text" class="tx_input fz_14 br_ddd"  placeholder=""></div>
+                <div class=" wd_12 t_c">币</div>
+            </div>
+            
+            <div class="pt16 ub ub-ac">
+                <div class="fz_16 co_z3 wd_28">商品图：</div>
+                <div class="ub-f1 po_r"><input type="file" class="ycfile"><i class="appicon fz_30">&#xe625;</i></div>
+            </div>
+        </div>
+    </div>
+    <div class="spli pa_16 ba_fc br_db br_ddd ub ub-ac">
+    	<div class="fz_16 fz_we spxh mr16">2</div>
+        <div class="ub-f1">
+            <div class=" ub ub-ac">
+                <div class="fz_16 co_z3 wd_28">商品名：</div>
+                <div class="ub-f1"><input type="text" class="tx_input fz_14 br_ddd"  placeholder=""></div>
+                <div class=" wd_12 t_c">元 =</div>
+                <div class="ub-f1"><input type="text" class="tx_input fz_14 br_ddd"  placeholder=""></div>
+                <div class=" wd_12 t_c">币</div>
+            </div>
+            
+            <div class="pt16 ub ub-ac">
+                <div class="fz_16 co_z3 wd_28">商品图：</div>
+                <div class="ub-f1 po_r"><input type="file" class="ycfile"><i class="appicon fz_30">&#xe625;</i></div>
+            </div>
+        </div>
+    </div>
+    <a class=" wd_100 iskuai pa_tb10 ba_f6 t_c br_b br_ddd" id="addtbsp">继续添加商品</a>
+    
+    <div class=" pa_lr16 ba_ff  br_b br_t br_ddd mt10 pa_tb6 ub ub-ac">
+        <div class="fz_16 co_z3 wd_28">适合机器：</div>
+        <div class="ub-f1 select_box"><input type="text" class="tx_input br_nb fz_14 select_value"><a class="select_icon"><i class="appicon">&#xe644;</i></a></div>
+    </div>
+    
+    <a class="pro_zfbut close ma_b10 ma_lrauto zf sz_li">确定添加</a>
+</div>
+
+
+<div class="pages three trn">
+	<div class="ad_img wd_100  t_c pa_b10 pl0 pr0 bg3 po_r">
+    <i class="appicon fz_50 co_ff">&#xe60c;</i>
+    <span class="pa_tb12 co_ff fz_18 iskuai">添加商品</span>
+    <a class="back_icon"><i class="appicon fz_28">&#xe65b;</i></a>
+    </div>
+    <div class=" pa_16 ba_ff pb26 br_db br_ddd">
+        <div class="pt10 ub ub-ac">
+        <div class="fz_16 co_z3 wd_28">模板名：</div>
+        <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入模板名"></div>
+        </div>
+        
+        <div class="pt20 ub ub-ac">
+        <div class="fz_16 co_z3 wd_28">商品类型：</div>
+        <div class="ub-f1 lt_btn clear3"><a class="btn trn fl auto pa_lr10 sz_li" to="two">投币类</a><a class="btn active trn fl auto pa_lr10 sz_li" to="three">实物类</a></div>
+        </div>   
+    </div>
+    
+    <div class="spli pa_16 ba_fc br_db br_ddd ub ub-ac">
+    	<div class="fz_16 fz_we spxh mr16">1</div>
+        <div class="ub-f1">
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品名：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入商品名"></div>
+            </div>
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品描述：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入商品描述"></div>
+            </div>
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">单价：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入单价"></div>
+                <div class=" wd_12 t_c">元</div>
+            </div>
+            
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品图：</div>
+                <div class="ub-f1 po_r"><input type="file" class="ycfile"><i class="appicon fz_30">&#xe625;</i></div>
+            </div>
+        </div>
+    </div>
+    <div class="spli pa_16 ba_fc br_db br_ddd ub ub-ac">
+    	<div class="fz_16 fz_we spxh mr16">2</div>
+        <div class="ub-f1">
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品名：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入商品名"></div>
+            </div>
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品描述：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入商品描述"></div>
+            </div>
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">单价：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入单价"></div>
+                <div class=" wd_12 t_c">元</div>
+            </div>
+            
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品图：</div>
+                <div class="ub-f1 po_r"><input type="file" class="ycfile"><i class="appicon fz_30">&#xe625;</i></div>
+            </div>
+        </div>
+    </div>
+    <a class=" wd_100 iskuai pa_tb10 ba_f6 t_c br_b br_ddd" id="addswsp">继续添加商品</a>
+    
+    <div class=" pa_lr16 ba_ff  br_b br_t br_ddd mt10 pa_tb6 ub ub-ac">
+        <div class="fz_16 co_z3 wd_28">适合机器：</div>
+        <div class="ub-f1 select_box"><input type="text" class="tx_input br_nb fz_14 select_value"><a class="select_icon"><i class="appicon">&#xe644;</i></a></div>
+    </div>
+    
+    <a class="pro_zfbut close ma_b10 ma_lrauto zf sz_li">确定添加</a>
+</div>
+
+<!--下拉选项主题-->
+<div class="select_mask"></div>
+<div class="select_more trn">
+    <div class="select_mli ub ub-ac">
+        <a class="chobox trn" isc="no"><i class="appicon fz_14">&#xe639;</i></a>
+        <div class="ub-f1 select_mtxt pl10">娃娃机</div>
+        <div class="select_mi trn"><i class="appicon">&#xe643;</i></div>
+    </div>
+    <div class="select_mli ub ub-ac">
+        <a class="chobox trn" isc="no"><i class="appicon fz_14">&#xe639;</i></a>
+        <div class="ub-f1 select_mtxt pl10">摇摇机</div>
+        <div class="select_mi trn"><i class="appicon">&#xe643;</i></div>
+    </div>
+    <div class="select_mli ub ub-ac">
+        <a class="chobox trn" isc="no"><i class="appicon fz_14">&#xe639;</i></a>
+        <div class="ub-f1 select_mtxt pl10">自动售卖机</div>
+        <div class="select_mi trn"><i class="appicon">&#xe643;</i></div> 
+    </div>
+    <div class="select_twobox pa_lr16">
+        <div class="select_mli ub ub-ac">
+            <a class="chobox trn" isc="no"><i class="appicon fz_14">&#xe639;</i></a>
+            <div class="ub-f1 select_mtxt pl10">利和广场售卖机</div>
+        </div>
+        <div class="select_mli ub ub-ac">
+            <a class="chobox trn" isc="no"><i class="appicon fz_14">&#xe639;</i></a>
+            <div class="ub-f1 select_mtxt pl10">大信新都会售卖机</div>
+        </div>
+    </div>
+</div> 
+
+
+<!--引用模板-->
+<div class="yc" id="tbsp_mb">
+	<div class="spli pa_16 ba_fc br_db br_ddd ub ub-ac">
+    	<div class="fz_16 fz_we spxh mr16">1</div>
+        <div class="ub-f1">
+            <div class=" ub ub-ac">
+                <div class="fz_16 co_z3 wd_28">商品名：</div>
+                <div class="ub-f1"><input type="text" class="tx_input fz_14 br_ddd"  placeholder=""></div>
+                <div class=" wd_12 t_c">元 =</div>
+                <div class="ub-f1"><input type="text" class="tx_input fz_14 br_ddd"  placeholder=""></div>
+                <div class=" wd_12 t_c">币</div>
+            </div>
+            
+            <div class="pt16 ub ub-ac">
+                <div class="fz_16 co_z3 wd_28">商品图：</div>
+                <div class="ub-f1 po_r"><input type="file" class="ycfile"><i class="appicon fz_30">&#xe625;</i></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="yc" id="swsp_mb">
+	<div class="spli pa_16 ba_fc br_db br_ddd ub ub-ac">
+    	<div class="fz_16 fz_we spxh mr16">1</div>
+        <div class="ub-f1">
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品名：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入商品名"></div>
+            </div>
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品描述：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入商品描述"></div>
+            </div>
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">单价：</div>
+                <div class="ub-f1"><input type="text" class="tx_input br_ddd fz_14" placeholder="输入单价"></div>
+                <div class=" wd_12 t_c">元</div>
+            </div>
+            
+            <div class=" ub ub-ac pb10">
+                <div class="fz_16 co_z3 wd_28">商品图：</div>
+                <div class="ub-f1 po_r"><input type="file" class="ycfile"><i class="appicon fz_30">&#xe625;</i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+
+
+$(function(){
+	select_box();
+	pages();
+	
+	//添加更多的商品栏
+    $("#addtbsp").on("click",function(){
+		var thisxh=$(".pages.two .spli").length;
+		$("#tbsp_mb .spxh").html(thisxh+1);
+		$(this).before($("#tbsp_mb").html());
+	});
+	$("#addswsp").on("click",function(){
+		var thisxh=$(".pages.three .spli").length;
+		$("#swsp_mb .spxh").html(thisxh+1);
+		$(this).before($("#swsp_mb").html());
+	});
+});
+
+function pages(){
+	$(".sz_li").on("click",function(){
+	var where=$(this).attr("to");
+	$(".pages").removeClass("open");
+	 //console.log(where);
+	$("."+where).addClass("open");
+	});
+	$(".pro_zfbut.close,.back_icon").on("click",function(){
+		$(".pages").removeClass("open");
+	});
+}
+
+//下拉多选项
+function select_box(){
+	$(".select_icon").on("click",function(){
+		$(this).parent().attr("ischoose","yes");
+		$(".select_more").addClass("open");
+		$(".select_mask").slideDown(100);
+	});
+	$(".select_mask").on("click",function(){
+		$(".select_box").attr("ischoose","no");
+		$(".select_more").removeClass("open");
+		$(".select_mask").slideUp(100);
+	});
+	
+	$(".select_mi").on("click",function(){
+		$(this).toggleClass("r45");
+		$(this).parent().next(".select_twobox").first().slideToggle(200);
+	});
+	
+	var addhtml="";
+	
+	chobox(
+		function(thisin){
+			
+			addhtml+=thisin.next(".select_mtxt").html()+",";
+			$(".select_box[ischoose='yes']").find(".select_value").val(addhtml);
+		},
+		function(thisout){
+			var ishtml=$(".select_box[ischoose='yes']").find(".select_value").val();
+			var chtml=thisout.next(".select_mtxt").html()+",";
+			ishtml=ishtml.replace(chtml,"");
+			addhtml=ishtml;
+			$(".select_box[ischoose='yes']").find(".select_value").val(ishtml);
+		}
+	);
+	
+}
+
+function chobox(infun,outfun){
+	$(".chobox").on("click",function(){
+		var isc=$(this).attr("isc");
+		if(isc=="no"){
+			$(this).addClass("open");$(this).attr("isc","yes");
+			infun($(this));
+		}else{
+			$(this).removeClass("open");$(this).attr("isc","no");
+			outfun($(this));
+		}
+	})
+}
+
+</script>
+</body>
+</html>

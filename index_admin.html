@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>易付云管理后台</title>
+<!--框架css-->
+<link href="css/common_h5.css" rel="stylesheet" type="text/css"/><!--公共css-->
+<!--附加css-->
+<link href="css/xsda.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="bil/echarts.common.min.js"></script>
+</head>
+<body class="qkybody h100 po_ab">
+
+<!--头部标准，一般固定-->
+<div class="qkyh5_header noshadow">
+    <div class="ba_red  pa_tb12 pa_lr16 co_ff ub ub-ac">
+    <div class="ub-f1 t_r">设备异常：1台设备，支付异常。</div>
+    <div class="ub-f1 pl16"><a class="co_ff" href="index_sbinfo.html">立即查看></a></div>
+    </div>
+
+    <div class="ad_img bg3 h100">
+       <div class="bus_name ub ub-ac ">
+       <div class="bus_tx ub-f1 t_r"><img src="images/tx_2.jpg"></div>
+       <div class="ub-f1 fz_18 fz_we co_ff pl16">小龙乐园电玩城</div>
+       </div>
+       <div class="bus_info ub ub-ac pa_tb8">
+           <div class="wd_50 po_r">
+               <div class="co_ff fz_16 t_c mb6">今日收入</div>
+               <div class="fz_26 fz_we co_or t_c"><i class="appicon fz_24">&#xe62f;</i>999</div>
+               <a class="po_ab_r addten">+10</a>
+           </div>
+           <div class="wd_50">
+               <div class="co_ff fz_16 t_c mb6">本月收入</div>
+               <div class="fz_26 fz_we co_or t_c"><i class="appicon fz_24">&#xe62f;</i>12345</div>
+           </div>
+       </div>
+    </div>
+</div>
+<!--中部标准，一般放列表-->
+<div class="qkyh5_main h100 box_b socrllbox">
+
+    <div class=" pa_14 ba_ff br_b br_ddd pb6">
+    	<div class="lt_btn2 ub ub-ac">
+        <a class="btn ub-f1 active trn" view="qs">收入趋势</a>
+        <a class="btn ub-f1 trn" view="bl">收入比例</a>
+        </div>
+    	<div class="lt_btn ub ub-ac mt16">
+        <a class="btn ub-f1 active trn">本周</a>
+        <a class="btn ub-f1 trn">本月</a>
+        <a class="btn ub-f1 trn">全部</a>
+        </div>
+  		<div class="data_view pt10" id="view"></div>	  
+    </div>
+    
+   <a class="pro_zfbut ma_tb10 ma_lrauto zf un" href="index_zfmx.html"><i class="appicon mr4">&#xe62f;</i>查看支付明细</a>
+   
+</div>
+<div class="qkyh5_footbg ub ub-ac ba_ff">
+
+<div class="ub-f1 t_c"><a class="footli active" href="index_admin.html"><i class="appicon">&#xe61d;</i><div>经营报表</div></a></div>
+<div class="ub-f1 t_c"><a class="footli" href="index_sbgl.html"><i class="appicon">&#xe722;</i><div>设备管理</div></a></div>
+<div class="ub-f1 t_c"><a class="footli" href="index_spgl.html"><i class="appicon">&#xe661;</i><div>商品管理</div></a></div>
+<div class="ub-f1 t_c"><a class="footli" href="index_sjzh.html"><i class="appicon">&#xe66a;</i><div>商家账户</div></a></div>
+
+</div>
+
+
+
+<script src="js/tb_h5.js"></script>
+<script>
+
+var datas_bl_mon={"现金":[2000,"#fde35b"],"微信":[5000,"#0db310"],"支付宝":[3000,"#6fcefe"]};
+var datas_bl={"现金":[200,"#fde35b"],"微信":[500,"#0db310"],"支付宝":[300,"#6fcefe"]};
+var datas_qs={"01.1":400,"01.2":520,"01.3":600,"01.4":538,"01.5":492,"01.6":780,"01.7":800};
+var datas_qs_mon={
+	"01.1":400,"01.2":520,"01.3":600,"01.4":538,"01.5":492,"01.6":780,"01.7":800,
+	"01.8":400,"01.9":520,"01.10":600,"01.11":538,"01.12":492,"01.13":780,"01.14":800,
+	"01.15":400,"01.16":520,"01.17":600,"01.18":538,"01.19":492,"01.20":780,"01.21":800,
+	"01.22":400,"01.23":520,"01.24":600,"01.25":538,"01.26":492,"01.27":780,"01.28":800,
+	"01.29":492,"01.30":780,"01.31":800
+	};
+
+$(function(){
+	qkyh5_topa_header(0,1);	
+	var thiswhere="qs";
+	xrsj("view",datas_qs,true);
+
+	$(".lt_btn2 .btn").on("click",function(){
+		if($(this).attr("view")=="qs"){xrsj("view",datas_qs,true);thiswhere="qs";}
+		else{xrzb("view",datas_bl);thiswhere="bl";}
+		$(this).addClass("active").siblings().removeClass("active");
+	});
+	
+	$(".lt_btn .btn").each(function(i) {
+        $(this).click(function(){
+			if(thiswhere=="qs"){
+				if(i==0){xrsj("view",datas_qs,true);}
+				else if(i==1){xrsj("view",datas_qs_mon,false);}
+				else{xrsj("view",datas_qs_mon,false);}
+			}else{
+				if(i==0){xrzb("view",datas_bl);}
+				else if(i==1){xrzb("view",datas_bl_mon);}
+				else{xrzb("view",datas_bl_mon);}
+			}	
+		$(this).addClass("active").siblings().removeClass("active");
+		});
+    });
+	
+
+
+
+});
+
+$(window).on('resize',function(){
+	xrsj("view",datas_qs);
+});
+
+//自动变化以头部的距离，i为想离头部有多远，可以负数
+function qkyh5_topa_header(i,jq){
+	if(jq==1){
+	var titHeight = $('.qkyh5_header').height()+i;
+	}else{
+	var titHeight = $('.qkyh5_header').offset().height+i;}
+	//console.log(titHeight);
+	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
+}
+
+</script>
+</body>
+</html>

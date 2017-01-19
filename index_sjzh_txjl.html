@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>提现记录</title>
+<!--框架css-->
+<link href="css/common_h5.css" rel="stylesheet" type="text/css"/><!--公共css-->
+<!--附加css-->
+<link href="css/xsda.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+</head>
+<body class="qkybody h100 po_ab">
+
+
+<!--头部标准，一般固定-->
+<div class="qkyh5_header noshadow">
+	<div class="ba_ff br_b br_ddd pa_16 ">
+        <div class="input_btn ub ub-ac">
+            <div class="ub-f5"><input type="text" placeholder="订单查询"></div>
+            <a class="btn ub-f1 iskuai fz_14">搜索</a>
+        </div>
+        <div class="lt_btn3 ub ub-ac mt16">
+        <a class="btn ub-f1 active trn">本周</a>
+        <a class="btn ub-f1 trn">本月</a>
+        <a class="btn ub-f1 trn">全部</a>
+        </div>
+    </div>
+    <div class="ba_53  pa_tb8 pa_lr16  co_ff">本周提现：3笔，共计金额18888元</div>
+</div>
+
+<!--中部标准，一般放列表-->
+<div class="qkyh5_main h100 box_b pb32">
+	
+    <div class="tx_li ba_ff br_b br_t br_ddd mt10">
+        <div class="t_c pt16 pb8 po_r wd_100">
+            <span class="fz_40 co_z6">+100</span> 元 
+            <a class="po_ab_r tx_morebtn"><i class="appicon">&#xe61a;</i></a>
+        </div>
+        <div class="tips mb16">提现成功</div>
+        <div class="txli_down">
+        <div class="down_li ub ub-ac"><div class="ub-f1">订单号</div><div class="ub-f1 t_r">2016000000000001</div></div>
+        <div class="txli_more">
+             <div class="down_li ub ub-ac"><div class="ub-f1">提现人</div><div class="ub-f1 t_r">张三丰</div></div>
+             <div class="down_li ub ub-ac"><div class="ub-f1">账户ID</div><div class="ub-f1 t_r">xxxxxxxxxxxx</div></div>
+             <div class="down_li ub ub-ac"><div class="ub-f1">提现账号</div><div class="ub-f1 t_r">微信账户</div></div>
+        </div>
+        <div class="down_li ub ub-ac"><div class="ub-f1">提现时间</div><div class="ub-f1 t_r">2016/11/11 11:11:11</div></div> 
+        </div>       
+    </div>
+    
+    <div class="tx_li ba_ff br_b br_t br_ddd mt10">
+        <div class="t_c pt16 pb8 po_r wd_100">
+            <span class="fz_40 co_z6">+100</span> 元 
+            <a class="po_ab_r tx_morebtn"><i class="appicon">&#xe61a;</i></a>
+        </div>
+        <div class="tips mb16">提现成功</div>
+        <div class="txli_down">    
+        <div class="down_li ub ub-ac"><div class="ub-f1">订单号</div><div class="ub-f1 t_r">2016000000000001</div></div>
+        <div class="txli_more">
+             <div class="down_li ub ub-ac"><div class="ub-f1">提现人</div><div class="ub-f1 t_r">张三丰</div></div>
+             <div class="down_li ub ub-ac"><div class="ub-f1">账户ID</div><div class="ub-f1 t_r">xxxxxxxxxxxx</div></div>
+             <div class="down_li ub ub-ac"><div class="ub-f1">提现账号</div><div class="ub-f1 t_r">微信账户</div></div>
+        </div>
+        <div class="down_li ub ub-ac"><div class="ub-f1">提现时间</div><div class="ub-f1 t_r">2016/11/11 11:11:11</div></div>  
+        </div>   
+    </div>
+    
+    <div class="tx_li ba_ff br_b br_t br_ddd mt10">
+        <div class="t_c pt16 pb8 po_r wd_100">
+            <span class="fz_40 co_z6">+100</span> 元 
+            <a class="po_ab_r tx_morebtn"><i class="appicon">&#xe61a;</i></a>
+        </div>
+        <div class="tips mb16">提现成功</div>
+        <div class="txli_down">    
+        <div class="down_li ub ub-ac"><div class="ub-f1">订单号</div><div class="ub-f1 t_r">2016000000000001</div></div>
+        <div class="txli_more">
+             <div class="down_li ub ub-ac"><div class="ub-f1">提现人</div><div class="ub-f1 t_r">张三丰</div></div>
+             <div class="down_li ub ub-ac"><div class="ub-f1">账户ID</div><div class="ub-f1 t_r">xxxxxxxxxxxx</div></div>
+             <div class="down_li ub ub-ac"><div class="ub-f1">提现账号</div><div class="ub-f1 t_r">微信账户</div></div>
+        </div>
+        <div class="down_li ub ub-ac"><div class="ub-f1">提现时间</div><div class="ub-f1 t_r">2016/11/11 11:11:11</div></div>  
+        </div>   
+    </div>
+    
+    
+    
+           
+   
+</div>
+
+
+
+<script>
+$(function(){
+	qkyh5_topa_header(0,1);	
+		$(".tx_morebtn").click(function(){
+			if($(this).find("i").attr("iscli")=="no"){
+				$(this).find("i").html("&#xe65a;");
+				$(this).parents(".tx_li").find(".txli_more").slideDown(200);
+				$(this).find("i").attr("iscli","yes");
+			}else{
+				$(this).find("i").html("&#xe61a;");
+				$(this).parents(".tx_li").find(".txli_more").slideUp(200);
+				$(this).find("i").attr("iscli","no");
+			}
+			
+		});
+		
+		$(".lt_btn3 .btn").on("click",function(){
+			$(this).addClass("active").siblings().removeClass("active");
+		})
+
+});
+
+//自动变化以头部的距离，i为想离头部有多远，可以负数
+function qkyh5_topa_header(i,jq){
+	if(jq==1){
+	var titHeight = $('.qkyh5_header').height()+i;
+	}else{
+	var titHeight = $('.qkyh5_header').offset().height+i;}
+	//console.log(titHeight);
+	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
+}
+
+</script>
+</body>
+</html>

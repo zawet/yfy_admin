@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>易付云管理后台</title>
+<!--框架css-->
+<link href="css/common_h5.css" rel="stylesheet" type="text/css"/><!--公共css-->
+<!--附加css-->
+<link href="css/xsda.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+
+</head>
+<body class="qkybody h100 po_ab">
+
+<!--头部标准，一般固定-->
+<div class="qkyh5_header noshadow">
+    
+    <div class="ad_img bg3 ">
+        <div class="bus_name ub ub-ac pa_lr16 pb0 po_r">
+            <div class="bus_tx big po_r">
+            <img src="images/tx_2.jpg">
+            <a class="po_ab_r tx_edit co_ff"><i class="appicon fz_28">&#xe60d;</i><input type="file" class="ycfile"></a>
+            </div>
+            <div class="ub-f1 co_ff pl26"><div class="fz_18 fz_we mb4">小龙乐园电玩城</div><div class="fz_16">账户余额：<span class="fz_30 fz_we co_or">￥10000</span></div></div>
+            <a class=" po_ab_r zh_seticon sz_li" to="two"><i class="appicon fz_26 co_ff">&#xe837;</i></a>
+        </div>
+        <div class="co_ff fz_14 pb20 fz_we pa_lr16">商家ID:B123456</div>
+    </div>
+
+</div>
+<!--中部标准，一般放列表-->
+<div class="qkyh5_main h100 box_b socrllbox">
+    <div class="ba_ff pa_16 br_b br_ddd">
+      <a href="index_sjzh_tx.html">
+      <div class="ub ub-ac br_b br_eee pb16 pa_lr10">
+          <div class="zh_icon gr"><i class="appicon fz_30">&#xe61b;</i></div>
+          <div class="ub-f1 pl20 fz_18 co_z6">提现</div>
+          <div class="ub-f1 t_r co_z9"><i class="appicon fz_20">&#xe601;</i></div>
+      </div>
+      </a>
+      <a href="index_sjzh_zh.html">
+      <div class="ub ub-ac br_b br_eee pa_tb16 pa_lr10">
+          <div class="zh_icon ye"><i class="appicon fz_30">&#xe722;</i></div>
+          <div class="ub-f1 pl20 fz_18 co_z6">账户管理</div>
+          <div class="ub-f1 t_r co_z9"><i class="appicon fz_20">&#xe601;</i></div>
+      </div>
+      </a>
+      <a href="index_sjzh_zf.html">
+      <div class="ub ub-ac br_b br_eee pa_tb16 pa_lr10">
+          <div class="zh_icon or"><i class="appicon fz_30">&#xe63a;</i></div>
+          <div class="ub-f1 pl20 fz_18 co_z6">支付管理</div>
+          <div class="ub-f1 t_r co_z9"><i class="appicon fz_20">&#xe601;</i></div>
+      </div>
+      </a>
+      <a href="index_sjzh_mm.html">
+      <div class="ub ub-ac pt16 pa_lr10">
+          <div class="zh_icon bl"><i class="appicon fz_30">&#xe612;</i></div>
+          <div class="ub-f1 pl20 fz_18 co_z6">密码安全</div>
+          <div class="ub-f1 t_r co_z9"><i class="appicon fz_20">&#xe601;</i></div>
+      </div>
+      </a>
+    </div>
+    <a class="co_89 pl16 pa_tb10 iskuai ml10" href="tel:4008888888">客服电话：4008888888</a>
+   
+</div>
+<div class="qkyh5_footbg ub ub-ac ba_ff">
+
+<div class="ub-f1 t_c"><a class="footli" href="index_admin.html"><i class="appicon">&#xe61d;</i><div>经营报表</div></a></div>
+<div class="ub-f1 t_c"><a class="footli" href="index_sbgl.html"><i class="appicon">&#xe722;</i><div>设备管理</div></a></div>
+<div class="ub-f1 t_c"><a class="footli" href="index_spgl.html"><i class="appicon">&#xe661;</i><div>商品管理</div></a></div>
+<div class="ub-f1 t_c"><a class="footli active" href="index_sjzh.html"><i class="appicon">&#xe66a;</i><div>商家账户</div></a></div>
+
+</div>
+
+
+
+<div class="pages two trn">
+	<div class="ad_img wd_100  t_c pa_b10 pl0 pr0 bg3 po_r">
+    <i class="appicon fz_50 co_ff">&#xe837;</i>
+    <span class="pa_tb12 co_ff fz_18 iskuai">设置</span>
+    <a class="back_icon"><i class="appicon fz_28">&#xe65b;</i></a>
+    </div>
+    
+    
+    <a class="pro_zfbut un ma_lrauto mt16">清理页面缓存</a>
+    <a class="pro_zfbut red ma_lrauto mt16">退出当前帐号</a>
+    
+</div>
+
+
+<script>
+
+
+
+$(function(){
+	qkyh5_topa_header(0,1);	
+	
+	$(".sz_li").on("click",function(){
+	var where=$(this).attr("to");
+	 //console.log(where);
+	$("."+where).addClass("open");
+	});
+	$(".pro_zfbut.close,.back_icon").on("click",function(){
+		$(".pages").removeClass("open");
+	})	
+
+
+});
+
+
+
+//自动变化以头部的距离，i为想离头部有多远，可以负数
+function qkyh5_topa_header(i,jq){
+	if(jq==1){
+	var titHeight = $('.qkyh5_header').height()+i;
+	}else{
+	var titHeight = $('.qkyh5_header').offset().height+i;}
+	//console.log(titHeight);
+	$(".qkyh5_main").css({"paddingTop":titHeight+"px"});
+}
+
+</script>
+</body>
+</html>

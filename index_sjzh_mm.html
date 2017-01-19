@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>密码安全</title>
+<!--框架css-->
+<link href="css/common_h5.css" rel="stylesheet" type="text/css"/><!--公共css-->
+<!--附加css-->
+<link href="css/xsda.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+
+</head>
+<body class="qkybody h100 po_ab">
+
+<!--中部标准，一般放列表-->
+<div class="qkyh5_main h100 box_b socrllbox">
+    <div class="ad_img wd_100  t_c pa_b10 pl0 pr0 bg3 po_r">
+    <i class="appicon fz_50 co_ff">&#xe612;</i>
+    <span class="pa_tb12 co_ff fz_18 iskuai">密码安全</span>
+    <a class="back_icon" href="index_sjzh.html"><i class="appicon fz_28">&#xe65b;</i></a>
+    </div>
+
+
+    
+    <a class="iskuai sz_li" to="two">
+    <div class="ub ub-ac pa_16 ba_ff br_b br_t br_ddd mt10">
+    <div class="ub_f3 fz_16"><i class="appicon mr6 fz_18">&#xecfa;</i>登录密码</div>
+    <div class="ub-f1 t_r"><i class="appicon fz_18">&#xe61a;</i></div>
+    </div>
+    </a>
+    
+    <a class="iskuai sz_li" to="three">
+    <div class="ub ub-ac pa_16 ba_ff br_b br_t br_ddd mt10">
+    <div class="ub_f3 fz_16"><i class="appicon mr6 fz_18">&#xe63a;</i>提现密码</div>
+    <div class="ub-f1 t_r"><i class="appicon fz_18">&#xe61a;</i></div>
+    </div>
+    </a>
+    
+</div>
+
+
+
+<div class="pages two trn">
+	<div class="ad_img wd_100  t_c pa_b10 pl0 pr0 bg3 po_r">
+    <i class="appicon fz_50 co_ff">&#xecfa;</i>
+    <span class="pa_tb12 co_ff fz_18 iskuai">登录密码</span>
+    <a class="back_icon"><i class="appicon fz_28">&#xe65b;</i></a>
+    </div>
+    <div class=" pa_16 ba_ff br_b br_ddd">
+    
+        <div class="pt20">
+        <div class="fz_16 co_z3">原密码：</div>
+        <input type="text" class="tx_input br_ddd fz_14" placeholder="输入原密码">
+        </div>
+        
+        <div class="pt20">
+        <div class="fz_16 co_z3">新密码：</div>
+        <input type="text" class="tx_input br_ddd fz_14" placeholder="8位密码，字母+数字组合">
+        </div>
+        
+        <div class="pt20">
+        <div class="fz_16  co_z3">确认新密码：</div>
+        <input type="text" class="tx_input br_ddd fz_14" placeholder="再次确认密码">
+        </div>
+        
+        <div class="pt20">
+        <div class="fz_16 co_z3">手机安全码：</div>
+        <div class="ub ub-ac">
+        <div class=" wd_70"><input type="text" class="tx_input fz_14 br_ddd"  placeholder="手机安全码"></div>
+        <div class="wd_30 t_r"><a class="btn wd_90 fz_14">获取安全码</a></div>
+        </div>
+
+        </div>
+        <div class=" co_89 pt6 box_b pl16 pb20">接手手机：1380****0000</div>
+    </div>
+    <a class="pro_zfbut close mt10 ma_lrauto zf">确定修改</a>
+</div>
+
+<div class="pages three trn">
+	<div class="ad_img wd_100  t_c pa_b10 pl0 pr0 bg3 po_r">
+    <i class="appicon fz_50 co_ff">&#xe63a;</i>
+    <span class="pa_tb12 co_ff fz_18 iskuai">提现密码</span>
+    <a class="back_icon"><i class="appicon fz_28">&#xe65b;</i></a>
+    </div>
+    <div class=" pa_16 ba_ff br_b br_ddd">
+    
+        <div class="pt20">
+        <div class="fz_16 co_z3">原密码：</div>
+        <input type="text" class="tx_input br_ddd fz_14" placeholder="输入原密码">
+        </div>
+        
+        <div class="pt20">
+        <div class="fz_16 co_z3">新密码：</div>
+        <input type="text" class="tx_input br_ddd fz_14" placeholder="8位密码，字母+数字组合">
+        </div>
+        
+        <div class="pt20">
+        <div class="fz_16  co_z3">确认新密码：</div>
+        <input type="text" class="tx_input br_ddd fz_14" placeholder="再次确认密码">
+        </div>
+        
+        <div class="pt20">
+        <div class="fz_16 co_z3">手机安全码：</div>
+        <div class="ub ub-ac">
+        <div class=" wd_70"><input type="text" class="tx_input fz_14 br_ddd"  placeholder="手机安全码"></div>
+        <div class="wd_30 t_r"><a class="btn wd_90 fz_14">获取安全码</a></div>
+        </div>
+
+        </div>
+        <div class=" co_89 pt6 box_b pl16 pb20">接手手机：1380****0000</div>
+    </div>
+    <a class="pro_zfbut close mt10 ma_lrauto zf">确定修改</a>
+</div>
+
+
+
+
+<script>
+$(function(){
+	$(".sz_li").on("click",function(){
+	var where=$(this).attr("to");
+	 //console.log(where);
+	$("."+where).addClass("open");
+	});
+	$(".pro_zfbut.close,.back_icon").on("click",function(){
+		$(".pages").removeClass("open");
+	});
+	
+});
+
+
+</script>
+</body>
+</html>

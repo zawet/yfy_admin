@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>设备信息</title>
+<!--框架css-->
+<link href="css/common_h5.css" rel="stylesheet" type="text/css"/><!--公共css-->
+<!--附加css-->
+<link href="css/xsda.css" rel="stylesheet" type="text/css"/>
+<!--公共js-->
+<script language="JavaScript" charset="utf-8" src="bil/jquery-1.9.1.min.js"></script>
+</head>
+<body class="qkybody h100 po_ab">
+
+
+
+<!--中部标准，一般放列表-->
+<div class="qkyh5_main pb0 h100 ">
+	
+    <div class="ad_img wd_100  t_c pt26 pl0 pr0  pb0 bg3">
+    <div class="ma_lrauto wd_40 po_r">
+    <img src="images/hxj.png" class=" iskuai wd_100  brra_8">
+    <a class="po_ab_r img_btn edit"><i class="appicon co_ff">&#xe62e;</i><input type="file" class="ycfile"></a>
+    <a class="po_ab_r img_btn del"><i class="appicon co_ff">&#xe603;</i></a>
+    </div>
+    <span class="pa_tb12 co_ff fz_18 iskuai">超有趣滑雪机</span>
+    </div>
+    <div class="ba_red  pa_tb12 pa_lr16 co_ff t_c"> 异常情况：  支付异常（机器故障，通信中断）</div>
+
+    <div class="tx_li ba_ff br_b br_t br_ddd mt10 pa_lr16">
+        <div class="down_li ub ub-ac br_b br_eee pa_tb6"><div class="ub-f1 fz_we">设备编号：</div><div class="ub-f1 t_r">hxj000001</div></div>
+        <div class="down_li ub ub-ac br_b br_eee pa_tb6"><div class="ub-f1 fz_we">设备类型：</div><div class="ub-f1 t_r">滑雪机</div></div>
+        <div class="down_li ub ub-ac br_b br_eee pa_tb6"><div class="ub-f1 fz_we">模块码：</div><div class="ub-f1 t_r">123456789</div></div>
+        <div class="down_li ub ub-ac  pa_tb6"><div class="ub-f1 fz_we">地址：</div><div class="ub-f1 t_r">中山市利和广场中庭2号机</div></div>
+    </div>
+    
+    <div class="tx_li ba_ff br_b br_t br_ddd mt10 pa_lr16">
+        <div class="down_li ub ub-ac br_b br_eee pa_tb6"><div class="ub-f1 fz_we">连接状态：</div><div class="ub-f1 t_r">在线</div></div>
+        <div class="down_li ub ub-ac pa_tb6"><div class="ub-f1 fz_we">连接方式：</div>
+        <div class="ub-f1 t_r">gprs
+        <span class="gprs_icon qiang"><b></b><b></b><b></b><b></b><b></b></span>
+        </div></div>
+    </div>
+    
+    <div class="tx_li ba_ff br_b br_t br_ddd ma_tb10 pa_lr16">
+        <div class="down_li ub ub-ac br_b br_eee pa_tb6">
+        <div class="ub-f1 fz_we">微信支付：</div>
+        <div class=" clear3">
+        <div class="wx_kg fr" isc="no"  o_txt="开启" c_txt="关闭"><div class="kg "></div></div><div class="kg_txt fr">关闭</div>
+        </div>
+        </div>
+        
+        <div class="down_li ub ub-ac br_b br_eee  pa_tb6"><div class="ub-f1 fz_we">支付宝支付：</div>
+        <div class=" clear3">
+        <div class="wx_kg fr" isc="no"  o_txt="开启" c_txt="关闭"><div class="kg "></div></div><div class="kg_txt fr">关闭</div>
+        </div>
+        </div>
+        
+        <div class="down_li ub ub-ac pa_tb6"><div class="ub-f1 fz_we">设备运行：</div>
+        <div class=" clear3">
+        <div class="wx_kg fr" isc="no" o_txt="开机" c_txt="关机"><div class="kg "></div></div><div class="kg_txt fr">关机</div>
+        </div>
+        </div>
+        
+        <!--<div class=" pa_lr16 ub ub-ac pa_tb6">
+        <div class=" wd_24 fz_we">设备图：</div>
+        <div class=" wd_40"><img src="images/hxj.jpg"  class="wd_100"></div>
+        <div class="ub-f1 t_r"><a class="btn link mb10">修改</a><a class="btn link">删除</a></div>
+        </div>-->
+    </div>
+    
+    
+    
+   
+</div>
+
+
+
+<script>
+$(function(){
+wx_kg();
+});
+
+function wx_kg(){
+	$(".wx_kg").on("click",function(){
+		var ot=$(this).attr("o_txt");var ct=$(this).attr("c_txt");
+		if($(this).attr("isc")=="no"){
+			$(this).addClass("open").next(".kg_txt").addClass("open").html(ot);$(this).attr("isc","yes");
+		}else{
+			$(this).removeClass("open").next(".kg_txt").removeClass("open").html(ct);;$(this).attr("isc","no");
+		}
+	});
+}
+
+</script>
+</body>
+</html>
